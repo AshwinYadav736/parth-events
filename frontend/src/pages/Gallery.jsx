@@ -25,7 +25,7 @@ export default function Gallery() {
   const fetchGallery = async (pageNumber, reset = false) => {
     try {
       const res = await fetch(
-        `http://localhost:5000/api/gallery?type=${activeTab}&page=${pageNumber}&limit=${limit}`
+        `https://parth-events.onrender.com/api/gallery?type=${activeTab}&page=${pageNumber}&limit=${limit}`
       );
       const data = await res.json();
 

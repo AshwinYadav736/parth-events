@@ -22,7 +22,7 @@ export default function Dashboard() {
   const fetchLeads = async () => {
     try {
       const res = await fetch(
-        "http://localhost:5000/api/leads",
+        "https://parth-events.onrender.com/api/leads",
         {
           headers: {
             Authorization: `Bearer ${token}`,

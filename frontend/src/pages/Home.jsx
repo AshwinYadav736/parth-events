@@ -71,7 +71,7 @@ Please share quotation and available dates.
     const userData = { name, email, phone };
 
     try {
-      await fetch("http://localhost:5000/api/leads", {
+      await fetch("https://parth-events.onrender.com/api/leads", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -163,7 +163,7 @@ Please share quotation and available dates.
     const fetchLatestImages = async () => {
       try {
         const res = await fetch(
-          "http://localhost:5000/api/gallery?type=image&page=1&limit=12"
+          "https://parth-events.onrender.com/api/gallery?type=image&page=1&limit=12"
         );
         const data = await res.json();
         const imageUrls = data.files.map((file) => file.url);

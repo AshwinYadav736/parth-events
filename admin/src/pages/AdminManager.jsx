@@ -22,7 +22,7 @@ export default function AdminManager() {
     setLoading(true);
     try {
       const res = await fetch(
-        "http://localhost:5000/api/admin",
+        "https://parth-events.onrender.com/api/admin",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -52,7 +52,7 @@ export default function AdminManager() {
 
     try {
       const res = await fetch(
-        "http://localhost:5000/api/admin/register",
+        "https://parth-events.onrender.com/api/admin/register",
         {
           method: "POST",
           headers: {
@@ -94,7 +94,7 @@ export default function AdminManager() {
 
     try {
       const res = await fetch(
-        `http://localhost:5000/api/admin/${id}`,
+        `https://parth-events.onrender.com/api/admin/${id}`,
         {
           method: "DELETE",
           headers: {

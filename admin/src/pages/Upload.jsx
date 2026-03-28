@@ -57,7 +57,7 @@ export default function Upload() {
 
       // STEP 2: Save metadata to backend
       await axios.post(
-        "http://localhost:5000/api/gallery",
+        "https://parth-events.onrender.com/api/gallery",
         {
           url: cloudRes.data.secure_url,
           public_id: cloudRes.data.public_id,

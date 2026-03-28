@@ -16,7 +16,7 @@ export default function GalleryManager() {
     setLoading(true);
     try {
       const res = await fetch(
-        `http://localhost:5000/api/gallery?type=${activeTab}&page=1&limit=100`
+        `https://parth-events.onrender.com/api/gallery?type=${activeTab}&page=1&limit=100`
       );
       const data = await res.json();
       setFiles(data.files);
@@ -32,7 +32,7 @@ export default function GalleryManager() {
 
     try {
       const res = await fetch(
-        `http://localhost:5000/api/gallery/${id}`,
+        `https://parth-events.onrender.com/api/gallery/${id}`,
         {
           method: "DELETE",
           headers: {
