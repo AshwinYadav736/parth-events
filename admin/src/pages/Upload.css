@@ -1,0 +1,150 @@
+.upload-card {
+  background: white;
+  padding: 40px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  max-width: 500px;
+}
+
+.upload-card input {
+  margin-bottom: 20px;
+}
+
+.preview-box {
+  margin-bottom: 20px;
+}
+
+.preview-box img,
+.preview-box video {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.upload-card button {
+  padding: 12px 20px;
+  border: none;
+  background: #111;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.upload-card button:hover {
+  background: #333;
+}
+
+.upload-card button:disabled {
+  background: #777;
+  cursor: not-allowed;
+}
+
+.upload-message {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.preview-box {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.preview-box img,
+.preview-box video {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.remove-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  border-radius: 50%;
+
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1;
+
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.remove-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+  transform: scale(1.05);
+}
+
+.preview-box video {
+  pointer-events: none;
+}
+
+.preview-box {
+  position: relative;
+  max-width: 400px;
+  margin: 20px 0;
+}
+
+.preview-box img,
+.preview-box video {
+  width: 100%;
+  border-radius: 10px;
+  pointer-events: none;
+}
+
+.remove-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: black;
+  color: white;
+  border: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.progress-bar {
+  height: 8px;
+  background: #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+  margin: 15px 0;
+}
+
+.progress-bar div {
+  height: 100%;
+  background: #111;
+  transition: width 0.3s ease;
+}
+
+.success-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.success-box {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .upload-card {
+    width: 210px;
+  }
+}

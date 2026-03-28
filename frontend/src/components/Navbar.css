@@ -1,0 +1,273 @@
+.navbar-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 25px 20px;
+  z-index: 10;
+}
+
+/* NAVBAR */
+.navbar {
+  background: white;
+  border-radius: 60px;
+  padding: 10px 40px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+}
+
+.navbar h1 {
+  color: black;
+  font-family: "Playfair Display", serif;
+  font-size: 22px;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+.navbar li {
+  color: #444;
+  cursor: pointer;
+  font-size: 17px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: 0.2s ease;
+}
+
+.navbar li:hover {
+  color: black;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+/* ============================= */
+/* PROFESSIONAL RESPONSIVE NAV  */
+/* ============================= */
+
+/* HAMBURGER */
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 6px;
+  z-index: 200;
+}
+
+.hamburger span {
+  width: 26px;
+  height: 3px;
+  background: #111;
+  border-radius: 3px;
+  transition: all 0.35s ease;
+}
+
+
+/* ===================================== */
+/* 📱 PHONES — Clean Premium Panel      */
+/* ===================================== */
+
+@media (max-width: 600px) {
+
+  .navbar {
+    padding: 12px 20px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .navbar ul {
+    padding: 120px 70px;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 85%;
+
+    background: #ffffff;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 30px 30px;
+    gap: 35px;
+
+    transition: right 0.35s ease;
+    z-index: 150;
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  /* Close button alignment */
+  .hamburger.open {
+    position: fixed;
+    top: 40px;
+    right: 35px;
+    z-index: 200;
+  }
+
+  /* Add spacing at top for logo area */
+  .nav-links::before {
+    content: "Menu";
+    font-family: "Playfair Display", serif;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .nav-links li {
+    font-size: 20px;
+    font-weight: 600;
+    color: #222;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+    padding-bottom: 12px;
+    width: 100%;
+  }
+
+  .nav-links li:last-child {
+    border-bottom: none;
+  }
+}
+
+
+
+/* ===================================== */
+/* 📲 TABLETS — Clean Premium Dropdown  */
+/* ===================================== */
+
+@media (min-width: 601px) and (max-width: 1024px) {
+
+  .navbar {
+    padding: 14px 32px;
+    position: relative;
+  }
+
+  .nav-links {
+    display: none;
+
+    position: absolute;
+    top: calc(100% + 15px); /* directly under navbar */
+    right: 0;
+
+    width: 260px;
+
+    background: #ffffff;
+    border-radius: 20px;
+
+    flex-direction: column;
+    align-items: flex-start;
+
+    padding: 25px 25px;
+    gap: 18px;
+
+    box-shadow:
+      0 10px 25px rgba(0,0,0,0.08),
+      0 25px 50px rgba(0,0,0,0.12);
+
+    z-index: 500;
+  }
+
+  .nav-links.active {
+    display: flex;
+    padding: 25px 0px;
+  }
+
+  .nav-links li {
+    font-size: 16px;
+    font-weight: 500;
+    width: 100%;
+    padding: 8px 50px;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+  }
+
+  .nav-links li:last-child {
+    border-bottom: none;
+  }
+
+  .nav-links li:hover {
+    color: black;
+    padding-left: 6px;
+    transition: 0.2s ease;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+
+/* ===================================== */
+/* 💻 DESKTOP                           */
+/* ===================================== */
+
+@media (min-width: 1025px) {
+
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    gap: 35px;
+  }
+
+  .hamburger {
+    display: none;
+  }
+}
+
+
+/* ===================================== */
+/* Hamburger Animation                  */
+/* ===================================== */
+
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+
+/* ===================================== */
+/* Smooth Dropdown Animation            */
+/* ===================================== */
+
+@keyframes dropdownFade {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

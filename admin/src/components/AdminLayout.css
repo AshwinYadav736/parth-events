@@ -1,0 +1,65 @@
+
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.admin-content {
+  flex: 1;
+  padding: 40px;
+  background: #f5f6fa;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+/* Mobile Toggle */
+.mobile-toggle {
+  display: none;
+  background: #111;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+/* Overlay */
+.sidebar-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(3px);
+  z-index: 998;
+}
+
+/* =========================
+   TABLET
+========================= */
+@media (max-width: 1024px) {
+  .admin-content {
+    padding: 30px 25px;
+  }
+}
+
+/* =========================
+   MOBILE FIX
+========================= */
+@media (max-width: 768px) {
+
+  .admin-layout {
+    display: block; /* 🔥 remove flex */
+  }
+
+  .admin-content {
+    padding: 20px;
+    width: 90%;
+  }
+
+  .mobile-toggle {
+    display: inline-block;
+  }
+
+}

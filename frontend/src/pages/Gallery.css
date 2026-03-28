@@ -1,0 +1,281 @@
+.gallery-heading {
+  margin: 50px 0 20px;
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* Masonry Layout */
+.masonry {
+  column-count: 4;
+  column-gap: 15px;
+  padding: 0 20px;
+}
+
+.masonry-item {
+  break-inside: avoid;
+  margin-bottom: 15px;
+}
+
+.masonry-item img,
+.masonry-item video {
+  width: 100%;
+  border-radius: 12px;
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .masonry {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .masonry {
+    column-count: 1;
+  }
+}
+
+/* Header Layout */
+
+.gallery-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+/* Tabs */
+
+.gallery-tabs {
+  display: flex;
+  gap: 12px;
+  background: #f3f3f3;
+  padding: 6px;
+  border-radius: 30px;
+}
+
+.tab-btn {
+  padding: 8px 18px;
+  border: none;
+  background: transparent;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.tab-btn:hover {
+  background: #e0e0e0;
+}
+
+.tab-btn.active {
+  background: #000;
+  color: #fff;
+}
+
+/* Show More Button */
+
+.show-more-container {
+  text-align: right;
+  margin: 40px 0;
+}
+
+.show-more-btn {
+  padding: 10px 25px;
+  border: none;
+  border-radius: 25px;
+  background: black;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+.show-more-btn:hover {
+  background: #333;
+}
+
+/* ===== Isolated Gallery Viewer ===== */
+
+.gallery-viewer-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 99999;
+
+  isolation: isolate;   /* 👈 IMPORTANT */
+}
+
+
+
+.gallery-viewer-content {
+  position: relative;
+  max-width: 85%;
+  max-height: 85%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-viewer-media {
+  max-width: 100%;
+  max-height: 80vh;
+  border-radius: 18px;
+}
+
+.gallery-viewer-close {
+  position: absolute;
+  top: -45px;
+  right: -10px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: none;
+  background: white;
+  cursor: pointer;
+}
+
+.gallery-viewer-btn {
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255,255,255,0.95);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+}
+
+.gallery-viewer-btn.left {
+  left: -60px;
+}
+
+.gallery-viewer-btn.right {
+  right: -60px;
+}
+/* =========================
+   LIGHTBOX VIEWER
+========================= */
+
+.gallery-viewer-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 99999;
+}
+
+.gallery-viewer-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.viewer-media {
+  max-width: 100%;
+  max-height: 90vh;
+  border-radius: 16px;
+}
+
+
+.viewer-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: white;
+  border: none;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  cursor: pointer;
+  font-size: 18px;
+  z-index: 10;
+}
+
+
+.viewer-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: white;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+ .viewer-btn.left {
+  left: 0;
+  transform: translate(-120%, -50%);
+}
+
+.viewer-btn.right {
+  right: 0;
+  transform: translate(120%, -50%);
+}
+@media (max-width: 1024px) {
+  .viewer-btn.left {
+    left: 15px;
+    transform: translateY(-50%);
+  }
+
+  .viewer-btn.right {
+    right: 15px;
+    transform: translateY(-50%);
+  }
+}
+
+/* Mobile Layout Fix */
+
+@media (max-width: 600px) {
+  .gallery-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .gallery-tabs {
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .content-section{
+    padding: 20px 30px;
+  }
+  .gallery-tabs{
+    width: auto;
+      }
+}
+@media (min-width: 320px) and (max-width: 360px) {
+  .content-section {
+    margin-top: 150px;
+  }
+  .navbar h1{
+    font-size: 20px;
+  }
+  .navbar{
+    padding: 12px;
+  }
+}

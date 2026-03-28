@@ -1,0 +1,87 @@
+.admin-table {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.admin-row {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin-row h4 {
+  margin: 0;
+}
+
+.admin-row p {
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.admin-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.role-badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  text-transform: capitalize;
+}
+
+.role-badge.super {
+  background: black;
+  color: white;
+}
+
+.role-badge.normal {
+  background: #ddd;
+}
+
+.delete-admin-btn {
+  padding: 6px 12px;
+  border: none;
+  background: red;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.create-admin-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.create-admin-card h3 {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.create-admin-card input,
+.create-admin-card select {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+.create-admin-card button {
+  padding: 8px 16px;
+  border: none;
+  background: black;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}

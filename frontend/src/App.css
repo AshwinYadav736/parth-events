@@ -1,0 +1,22 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, sans-serif;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  height: auto;
+}
+
+/* Page container */
+.page {
+  min-height: 200vh;
+  color: white;
+}

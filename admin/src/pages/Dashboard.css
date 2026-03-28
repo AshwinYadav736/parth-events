@@ -1,0 +1,95 @@
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #f4f6f9;
+}
+
+.admin-content {
+  flex: 1;
+  padding: 50px 60px;
+}
+
+.admin-header {
+  margin-bottom: 30px;
+}
+
+.admin-header h1 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.admin-header p {
+  font-size: 14px;
+  color: #666;
+}
+
+.dashboard-card {
+  background: white;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
+}
+.charts-container {
+  display: flex;
+  gap: 40px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.chart-card {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+  width: 340px;
+  transition: all 0.3s ease;
+}
+
+.chart-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.08);
+}
+
+.chart-card h3 {
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.donut-wrapper {
+  position: relative;
+  width: 100%;
+  height: 230px;
+  transition: transform 0.3s ease;
+}
+
+.donut-wrapper:hover {
+  transform: scale(1.03);
+}
+
+.donut-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.main-number {
+  font-size: 32px;
+  font-weight: 600;
+  color: #111;
+  display: block;
+}
+
+.percentage-text {
+  font-size: 14px;
+  color: #777;
+  margin-top: 4px;
+}
+@media (max-width: 768px) {
+  .chart-card{
+    width: 230px;
+  }
+}

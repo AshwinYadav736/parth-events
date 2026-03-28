@@ -1,0 +1,97 @@
+
+.sidebar {
+  width: 260px;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #0f0f0f, #1a1a1a);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 24px;
+  border-right: 1px solid #222;
+  transition: transform 0.3s ease;
+  z-index: 999;
+}
+
+/* Sidebar Content */
+.sidebar-top {
+  margin-bottom: 40px;
+}
+
+.sidebar-top h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.sidebar-top p {
+  font-size: 13px;
+  color: #aaa;
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sidebar nav a {
+  text-decoration: none;
+  color: #bbb;
+  font-size: 14px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  transition: all 0.25s ease;
+}
+
+.sidebar nav a:hover {
+  background: #222;
+  color: white;
+}
+
+.sidebar nav a.active {
+  background: #ffffff10;
+  color: white;
+  font-weight: 500;
+}
+
+.logout-btn {
+  margin-top: auto;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #ffffff10;
+  color: white;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.logout-btn:hover {
+  background: #ffffff20;
+}
+
+/* =========================
+   MOBILE SIDEBAR (REAL FIX)
+========================= */
+@media (max-width: 768px) {
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    transform: translateX(-100%);
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+  .logout-btn {
+    margin-top: 200px;
+  }
+
+}
+@media (max-width: 1024px){
+  .logout-btn {
+    margin-top: 200px;
+  }
+}
